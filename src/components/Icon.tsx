@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import iconMap, { IconType } from '../utils/iconMap';
+import { iconMap, IconType } from '../utils/iconMap';
 
 export interface IIconProps {
   iconKey: IconType;

@@ -1,7 +1,4 @@
-import * as iconMap from './iconMap';
+import { iconMap, SocialIconType, IconType } from './iconMap';
 import * as storage from './storage';
 
-export default {
-  iconMap,
-  storage,
-};
+export { iconMap, SocialIconType, IconType, storage };

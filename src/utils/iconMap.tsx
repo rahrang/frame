@@ -10,7 +10,7 @@ export type SocialIconType =
 
 export type IconType = SocialIconType | 'sun' | 'moon' | 'hamburger';
 
-export default {
+export const iconMap = {
   sun: (
     <svg
       aria-hidden="true"

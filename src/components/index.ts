@@ -4,10 +4,4 @@ import Icon from './Icon';
 import ExternalLinkButton from './ExternalLinkButton';
 import SwitchThemeButton from './SwitchThemeButton';
 
-export default {
-  Navbar,
-  Footer,
-  Icon,
-  ExternalLinkButton,
-  SwitchThemeButton,
-};
+export { Navbar, Footer, Icon, ExternalLinkButton, SwitchThemeButton };

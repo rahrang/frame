@@ -1,7 +1,19 @@
 import GlobalStyle from './GlobalStyle';
-import * as theme from './theme';
+import {
+  LIGHT_THEME_KEY,
+  DARK_THEME_KEY,
+  ThemeKeyType,
+  getInitialTheme,
+  getTheme,
+  setTheme,
+} from './theme';
 
-export default {
+export {
   GlobalStyle,
-  theme,
+  LIGHT_THEME_KEY,
+  DARK_THEME_KEY,
+  ThemeKeyType,
+  getInitialTheme,
+  getTheme,
+  setTheme,
 };
