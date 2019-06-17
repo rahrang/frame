@@ -21,7 +21,6 @@ export default styled.div`
       width: 100%;
       background-color: ${props => props.theme.colors.dark};
       padding: 1rem;
-      padding-top: 0;
       border-radius: ${props => props.theme.br};
 
       form.contact {
@@ -56,7 +55,6 @@ export default styled.div`
         input,
         textarea {
           background-color: ${props => props.theme.colors.lighter};
-          padding: 0.5rem;
         }
 
         input,
@@ -76,8 +74,6 @@ export default styled.div`
           background-color: ${props => props.theme.colors.gold};
           color: ${props => props.theme.colors.dark};
           cursor: pointer;
-          margin-top: 1rem;
-          padding: 0.5rem 1rem;
 
           transition: 0.25s ease-in-out;
 

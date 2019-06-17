@@ -12,7 +12,7 @@ export default class Footer extends React.Component {
     <div className="contact-form">
       <h3>Contact Me!</h3>
       <form
-        className="contact"
+        className="contact mb-0"
         name="contact"
         method="POST"
         data-netlify="true"
@@ -22,25 +22,27 @@ export default class Footer extends React.Component {
           <div className="input-wrapper">
             <label className="flex-col items-start" htmlFor="name">
               <span className="label">Name</span>
-              <input type="text" name="name" id="name" />
+              <input className="pr-h" type="text" name="name" id="name" />
             </label>
           </div>
           <div className="input-wrapper">
             <label className="flex-col items-start" htmlFor="email">
               <span className="label">Email</span>
-              <input type="email" name="email" id="email" />
+              <input className="pr-h" type="email" name="email" id="email" />
             </label>
           </div>
         </div>
         <div>
           <label className="flex-col items-start" htmlFor="message">
             <span className="label">Message</span>
-            <textarea name="message" id="message" />
+            <textarea className="pr-h" name="message" id="message" />
           </label>
         </div>
         <div data-netlify-recaptcha="true" />
         <div className="button-wrapper">
-          <button type="submit">Send It!</button>
+          <button className="py-h px-1 mt-1" type="submit">
+            Send It!
+          </button>
         </div>
       </form>
     </div>

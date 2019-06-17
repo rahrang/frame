@@ -20,7 +20,7 @@ export default class MobileNavbar extends React.Component<
       {render.externalLink('https://rahulrangnekar.com/about', 'About')}
       {render.externalLink('https://rahulrangnekar.com/projects', 'Projects')}
       {render.internalLink('/blog', 'Blog')}
-      {render.resumeButton()}
+      {render.resumeButton('mobile')}
     </React.Fragment>
   );
 
@@ -29,7 +29,7 @@ export default class MobileNavbar extends React.Component<
       {render.internalLink('/about', 'About')}
       {render.internalLink('/projects', 'Projects')}
       {render.externalLink('https://blog.rahulrangnekar.com', 'Blog')}
-      {render.resumeButton()}
+      {render.resumeButton('mobile')}
     </React.Fragment>
   );
 

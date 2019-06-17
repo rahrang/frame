@@ -16,7 +16,7 @@ export default class Navbar extends React.Component<{
       {render.externalHeadline()}
       <div className="navbar-section">
         {render.internalLink('/blog', 'Blog')}
-        {render.resumeButton()}
+        {render.resumeButton('desktop')}
       </div>
     </div>
   );
@@ -30,7 +30,7 @@ export default class Navbar extends React.Component<{
       {render.internalHeadline()}
       <div className="navbar-section">
         {render.externalLink('https://blog.rahulrangnekar.com', 'Blog')}
-        {render.resumeButton()}
+        {render.resumeButton('desktop')}
       </div>
     </div>
   );

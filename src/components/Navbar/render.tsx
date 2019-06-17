@@ -27,11 +27,12 @@ export const externalHeadline = () => (
   </a>
 );
 
-export const resumeButton = () => (
+export const resumeButton = (from: 'mobile' | 'desktop') => (
   <ExternalLinkButton
     href="https://rahulrangnekar.com/resume"
     target="_blank"
     rel="noopener noreferrer"
+    alternate={from === 'desktop'}
   >
     Resume
   </ExternalLinkButton>
