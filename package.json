@@ -1,0 +1,51 @@
+{
+  "name": "@rahrang/frame",
+  "private": false,
+  "version": "1.0.2",
+  "description": "a package to store common resources across Rahul Rangnekar's websites",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "author": "Rahul Rangnekar <rahrang.dev@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -cw"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.134",
+    "@types/react": "^16.8.20",
+    "@types/react-dom": "^16.8.4",
+    "@types/styled-components": "^4.1.16",
+    "gatsby": "^2.9.4",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "lodash": "^4.17.11",
+    "prettier": "^1.17.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "rollup": "^1.13.1",
+    "rollup-plugin-typescript2": "^0.21.1",
+    "styled-components": "^4.3.1",
+    "typescript": "^3.5.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "peerDependencies": {
+    "lodash": "^4.17.11",
+    "react": "^16.8.6",
+    "styled-components": "^4.3.1"
+  }
+}
