@@ -101,6 +101,7 @@ export default createGlobalStyle`
       display: flex;
       flex-direction: column;
     }
+    
     .items-baseline {
       align-items: baseline;
     }
@@ -113,6 +114,7 @@ export default createGlobalStyle`
     .items-center {
       align-items: center;
     }
+    
     .content-start {
       justify-content: flex-start;
     }
@@ -121,6 +123,12 @@ export default createGlobalStyle`
     }
     .content-center {
       justify-content: center;
+    }
+    .content-between {
+      justify-content: space-between;
+    }
+    .content-around {
+      justify-content: space-around;
     }
   }
 `;
