@@ -1,7 +1,7 @@
 {
   "name": "@rahrang/frame",
   "private": false,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "a package to store common resources across Rahul Rangnekar's websites",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -13,7 +13,8 @@
   "license": "MIT",
   "scripts": {
     "build": "rollup -c",
-    "watch": "rollup -cw"
+    "watch": "rollup -cw",
+    "deploy": "yarn build && yarn publish"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.134",
