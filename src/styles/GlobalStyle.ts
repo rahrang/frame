@@ -48,9 +48,11 @@ export default createGlobalStyle`
 
   body {
     background-color: ${props => props.theme.colors.bgColor};
-    font-family: 'system-ui';
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
+
+    margin-bottom: 4rem;
 
     /* TODO: add font, flex styles */
 

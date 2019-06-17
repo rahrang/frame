@@ -101,9 +101,6 @@ export default styled.div`
     }
 
     .navbar-section {
-      * {
-        display: inline-block;
-      }
     }
   }
 `;
