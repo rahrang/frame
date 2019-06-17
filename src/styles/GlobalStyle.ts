@@ -101,7 +101,9 @@ export default createGlobalStyle`
     }
 
     ${flex}
+
     ${margin}
+    
     ${padding}
   }
 `;
