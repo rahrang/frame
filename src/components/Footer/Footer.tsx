@@ -18,22 +18,22 @@ export default class Footer extends React.Component {
         data-netlify="true"
         data-netlify-recaptcha="true"
       >
-        <div className="row-1">
+        <div className="flex-row items-baseline top-row">
           <div className="input-wrapper">
-            <label htmlFor="name">
+            <label className="flex-col items-start" htmlFor="name">
               <span className="label">Name</span>
               <input type="text" name="name" id="name" />
             </label>
           </div>
           <div className="input-wrapper">
-            <label htmlFor="email">
+            <label className="flex-col items-start" htmlFor="email">
               <span className="label">Email</span>
               <input type="email" name="email" id="email" />
             </label>
           </div>
         </div>
         <div>
-          <label htmlFor="message">
+          <label className="flex-col items-start" htmlFor="message">
             <span className="label">Message</span>
             <textarea name="message" id="message" />
           </label>
@@ -49,7 +49,9 @@ export default class Footer extends React.Component {
   static renderOnlineSection = () => (
     <div className="online">
       <h3>Find Me Online!</h3>
-      <div className="social-icons">{Footer.renderLinks()}</div>
+      <div className="social-icons flex-row items-baseline">
+        {Footer.renderLinks()}
+      </div>
     </div>
   );
 

@@ -25,23 +25,13 @@ export default styled.div`
       border-radius: ${props => props.theme.br};
 
       form.contact {
-        label {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
         span.label {
           font-size: 0.875rem;
           text-transform: uppercase;
           margin-bottom: 0.25rem;
         }
 
-        .row-1 {
-          display: flex;
-          flex-direction: row;
-          align-items: baseline;
-
+        .top-row {
           margin-bottom: 1.5rem;
 
           .input-wrapper {
@@ -101,10 +91,6 @@ export default styled.div`
 
     .online {
       .social-icons {
-        display: flex;
-        flex-direction: row;
-        align-items: baseline;
-
         .link {
           color: ${props => props.theme.colors.light};
           margin-right: 1rem;

@@ -3,9 +3,6 @@ import styled from 'styled-components';
 export default styled.div`
   .mobile-only {
     margin-top: 1rem;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
 
     @media (min-width: 1000px) {
       display: none;
@@ -62,8 +59,6 @@ export default styled.div`
         background-color: ${props => props.theme.colors.textColor};
         border-radius: ${props => props.theme.br};
         box-shadow: ${props => props.theme.bxs};
-        display: flex;
-        flex-direction: column;
 
         width: 250px;
         padding: 0 1rem 1rem;
@@ -90,11 +85,6 @@ export default styled.div`
     }
 
     margin: 1rem 0 0;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
 
     .navlink {
       color: ${props => props.theme.colors.textColor};

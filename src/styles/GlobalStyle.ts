@@ -72,6 +72,10 @@ export default createGlobalStyle`
       }
     }
 
+    .content {
+      margin-top: 1rem;
+    }
+
     h1, h2, h3, h4 {
       color: ${props => props.theme.colors.headingColor};
     }

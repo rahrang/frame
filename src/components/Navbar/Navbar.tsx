@@ -1,54 +1,52 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
 
 import NavbarStyles from './styles';
 import MobileNavbar from './MobileNavbar';
-import ExternalLinkButton from '../ExternalLinkButton';
+import * as render from './render';
 
-export default class Navbar extends React.Component {
+export default class Navbar extends React.Component<{
+  from: 'blog' | 'website';
+}> {
+  static renderBlogNavbar = () => (
+    <div className="navbar flex-row items-end content-between">
+      <div className="navbar-section">
+        {render.externalLink('https://rahulrangnekar.com/about', 'About')}
+        {render.externalLink('https://rahulrangnekar.com/projects', 'Projects')}
+      </div>
+      {render.externalHeadline()}
+      <div className="navbar-section">
+        {render.internalLink('/blog', 'Blog')}
+        {render.resumeButton()}
+      </div>
+    </div>
+  );
+
+  static renderWebsiteNavbar = () => (
+    <div className="navbar flex-row items-end content-between">
+      <div className="navbar-section">
+        {render.internalLink('/about', 'About')}
+        {render.internalLink('/projects', 'Projects')}
+      </div>
+      {render.internalHeadline()}
+      <div className="navbar-section">
+        {render.externalLink('https://blog.rahulrangnekar.com', 'Blog')}
+        {render.resumeButton()}
+      </div>
+    </div>
+  );
+
   render() {
+    const { from } = this.props;
+
     return (
       <NavbarStyles>
         <div className="content-container">
-          <div className="navbar">
-            <div className="navbar-section">
-              <Link
-                className="navlink"
-                to="/about"
-                activeClassName="navlink--active"
-              >
-                About
-              </Link>
-              <Link
-                className="navlink"
-                to="/projects"
-                activeClassName="navlink--active"
-              >
-                Projects
-              </Link>
-            </div>
-            <Link className="headline navlink" to="/">
-              <h1>Rahul Rangnekar</h1>
-            </Link>
-            <div className="navbar-section">
-              <a className="navlink" href="https://blog.rahulrangnekar.com">
-                Blog
-              </a>
-              <ExternalLinkButton
-                href="/resume"
-                target="_blank"
-                rel="noopener noreferrer"
-                alternate
-              >
-                Resume
-              </ExternalLinkButton>
-            </div>
-          </div>
-          <div className="mobile-only">
-            <MobileNavbar />
-            <Link className="headline navlink" to="/">
-              <h1>Rahul Rangnekar</h1>
-            </Link>
+          {from === 'website'
+            ? Navbar.renderWebsiteNavbar()
+            : Navbar.renderBlogNavbar()}
+          <div className="mobile-only flex-row items-end">
+            <MobileNavbar from={from} />
+            {render.internalHeadline()}
           </div>
         </div>
       </NavbarStyles>

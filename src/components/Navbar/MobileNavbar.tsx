@@ -1,20 +1,37 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
 
-import ExternalLinkButton from '../ExternalLinkButton';
+import * as render from './render';
 import Icon from '../Icon';
 
-interface IMobileNavbarState {
-  isOpen: boolean;
-}
-
 export default class MobileNavbar extends React.Component<
-  {},
-  IMobileNavbarState
+  {
+    from: 'blog' | 'website';
+  },
+  {
+    isOpen: boolean;
+  }
 > {
   state = {
     isOpen: false,
   };
+
+  static renderBlogMobileNavbar = () => (
+    <React.Fragment>
+      {render.externalLink('https://rahulrangnekar.com/about', 'About')}
+      {render.externalLink('https://rahulrangnekar.com/projects', 'Projects')}
+      {render.internalLink('/blog', 'Blog')}
+      {render.resumeButton()}
+    </React.Fragment>
+  );
+
+  static renderWebsiteMobileNavbar = () => (
+    <React.Fragment>
+      {render.internalLink('/about', 'About')}
+      {render.internalLink('/projects', 'Projects')}
+      {render.externalLink('https://blog.rahulrangnekar.com', 'Blog')}
+      {render.resumeButton()}
+    </React.Fragment>
+  );
 
   toggle = () => {
     this.setState(prevState => ({ isOpen: !prevState.isOpen }));
@@ -26,6 +43,7 @@ export default class MobileNavbar extends React.Component<
 
   render() {
     const { isOpen } = this.state;
+    const { from } = this.props;
 
     return (
       <div className="mobile">
@@ -34,31 +52,10 @@ export default class MobileNavbar extends React.Component<
         </button>
         {isOpen && (
           <div className="mobile-navbar" onClick={this.close}>
-            <div className="content">
-              <Link
-                className="navlink"
-                to="/about"
-                activeClassName="navlink--active"
-              >
-                About
-              </Link>
-              <Link
-                className="navlink"
-                to="/projects"
-                activeClassName="navlink--active"
-              >
-                Projects
-              </Link>
-              <a className="navlink" href="https://blog.rahulrangnekar.com">
-                Blog
-              </a>
-              <ExternalLinkButton
-                href="/resume"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Resume
-              </ExternalLinkButton>
+            <div className="content flex-col">
+              {from === 'website'
+                ? MobileNavbar.renderWebsiteMobileNavbar()
+                : MobileNavbar.renderBlogMobileNavbar()}
             </div>
           </div>
         )}
