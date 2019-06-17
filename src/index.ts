@@ -1,9 +1,38 @@
-import * as components from './components/index';
-import * as styles from './styles/index';
-import * as utils from './utils/index';
+import {
+  Navbar,
+  Footer,
+  Icon,
+  ExternalLinkButton,
+  SwitchThemeButton,
+} from './components/index';
 
-export default {
-  ...components,
-  ...styles,
-  ...utils,
+import {
+  GlobalStyle,
+  LIGHT_THEME_KEY,
+  DARK_THEME_KEY,
+  ThemeKeyType,
+  getInitialTheme,
+  getTheme,
+  setTheme,
+} from './styles/index';
+
+import { iconMap, SocialIconType, IconType, storage } from './utils/index';
+
+export {
+  Navbar,
+  Footer,
+  Icon,
+  ExternalLinkButton,
+  SwitchThemeButton,
+  GlobalStyle,
+  LIGHT_THEME_KEY,
+  DARK_THEME_KEY,
+  ThemeKeyType,
+  getInitialTheme,
+  getTheme,
+  setTheme,
+  iconMap,
+  SocialIconType,
+  IconType,
+  storage,
 };
