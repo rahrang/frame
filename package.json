@@ -1,7 +1,7 @@
 {
   "name": "@rahrang/frame",
   "private": false,
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "a package to store common resources across Rahul Rangnekar's websites",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
