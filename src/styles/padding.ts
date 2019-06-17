@@ -26,50 +26,50 @@ export default css`
   }
 
   .p-h {
-    padding: 0.5;
+    padding: 0.5rem;
   }
   .pt-h {
-    padding-top: 0.5;
+    padding-top: 0.5rem;
   }
   .pb-h {
-    padding-bottom: 0.5;
+    padding-bottom: 0.5rem;
   }
   .py-h {
-    padding-top: 0.5;
-    padding-bottom: 0.5;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
   .pl-h {
-    padding-left: 0.5;
+    padding-left: 0.5rem;
   }
   .pr-h {
-    padding-right: 0.5;
+    padding-right: 0.5rem;
   }
   .px-h {
-    padding-left: 0.5;
-    padding-right: 0.5;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .p-1 {
-    padding: 1;
+    padding: 1rem;
   }
   .pt-1 {
-    padding-top: 1;
+    padding-top: 1rem;
   }
   .pb-1 {
-    padding-bottom: 1;
+    padding-bottom: 1rem;
   }
   .py-1 {
-    padding-top: 1;
-    padding-bottom: 1;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   .pl-1 {
-    padding-left: 1;
+    padding-left: 1rem;
   }
   .pr-1 {
-    padding-right: 1;
+    padding-right: 1rem;
   }
   .px-1 {
-    padding-left: 1;
-    padding-right: 1;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 `;
