@@ -11,11 +11,12 @@ export default styled.div`
 
   .navlink {
     font-size: 0.875rem;
+    font-weight: 600;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
-    margin: 0.75rem 0;
+
+    margin: 0.75rem 1rem 0.75rem 0;
     padding: 0.25rem 0.5rem;
-    font-weight: 600;
 
     &.headline {
       text-align: center;

@@ -60,6 +60,7 @@ export default class Footer extends React.Component {
       links,
       (l: { href: string; icon: SocialIconType; platform: string }) => (
         <a
+          key={l.href}
           className="link"
           href={l.href}
           target="_blank"
