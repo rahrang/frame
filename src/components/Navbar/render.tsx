@@ -32,7 +32,6 @@ export const resumeButton = () => (
     href="https://rahulrangnekar.com/resume"
     target="_blank"
     rel="noopener noreferrer"
-    alternate
   >
     Resume
   </ExternalLinkButton>
