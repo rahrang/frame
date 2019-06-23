@@ -22,20 +22,20 @@ export default class Footer extends React.Component {
           <div className="input-wrapper">
             <label className="flex-col items-start" htmlFor="name">
               <span className="label">Name</span>
-              <input className="pr-h" type="text" name="name" id="name" />
+              <input className="p-h" type="text" name="name" id="name" />
             </label>
           </div>
           <div className="input-wrapper">
             <label className="flex-col items-start" htmlFor="email">
               <span className="label">Email</span>
-              <input className="pr-h" type="email" name="email" id="email" />
+              <input className="p-h" type="email" name="email" id="email" />
             </label>
           </div>
         </div>
         <div>
           <label className="flex-col items-start" htmlFor="message">
             <span className="label">Message</span>
-            <textarea className="pr-h" name="message" id="message" />
+            <textarea className="p-h" name="message" id="message" />
           </label>
         </div>
         <div data-netlify-recaptcha="true" />
